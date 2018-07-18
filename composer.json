@@ -1,0 +1,23 @@
+{
+    "name": "catalinmoiceanu/xml-builder",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^7.2"
+    },
+    "authors": [
+        {
+            "name": "Catalin Moiceanu",
+            "email": "catalin_moiceanu@yahoo.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "CatalinMoiceanu\\XmlBuilder\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CatalinMoiceanu\\XmlBuilder\\Test\\": "test/"
+        }
+    }
+}
