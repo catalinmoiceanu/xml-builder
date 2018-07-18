@@ -8,7 +8,7 @@ use CatalinMoiceanu\XmlBuilder\Service\Converter\ConvertToXml;
 use CatalinMoiceanu\XmlBuilder\Service\Decorator\XmlDecorator;
 use PHPUnit\Framework\TestCase;
 
-class ToXmlStringTest extends TestCase
+class ConvertToXmlTest extends TestCase
 {
     /**
      * @covers \CatalinMoiceanu\XmlBuilder\Service\Converter\ConvertToXml::__construct()

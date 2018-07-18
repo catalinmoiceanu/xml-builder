@@ -10,7 +10,7 @@ class Tree extends Node
     private $nodes = [];
 
     /**
-     * @return array
+     * @return NodeInterface[]
      */
     public function getNodes(): array
     {
@@ -19,13 +19,25 @@ class Tree extends Node
 
     /**
      * @param NodeInterface $node
+     * @return null|NodeInterface
+     */
+    public function getNode(NodeInterface $node): ?NodeInterface
+    {
+        return array_reduce($this->getNodes(), function ($carry, NodeInterface $item) use ($node) {
+            if($item->equals($node)) {
+                $carry = $item;
+            }
+            return $carry;
+        });
+    }
+
+    /**
+     * @param NodeInterface $node
      * @return bool
      */
     public function hasNode(NodeInterface $node)
     {
-        return (bool) array_filter($this->getNodes(), function (NodeInterface $item) use ($node) {
-            return $item->equals($node);
-        });
+        return (bool) $this->getNode($node);
     }
 
     /**
