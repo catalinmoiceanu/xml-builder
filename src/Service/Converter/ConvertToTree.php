@@ -12,6 +12,9 @@ class ConvertToTree implements ConverterInterface
     /** @var NodeInterface $output */
     private $output;
 
+    /**
+     * @param array $input
+     */
     public function __construct(array $input)
     {
         $this->input = $input;
