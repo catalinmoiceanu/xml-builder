@@ -19,5 +19,8 @@
         "psr-4": {
             "CatalinMoiceanu\\XmlBuilder\\Test\\": "test/"
         }
+    },
+    "scripts": {
+        "test": "phpunit"
     }
 }
